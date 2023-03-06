@@ -26,11 +26,11 @@ https://github.com/zafarfast/tb5327643133
 #### Heroku 
 https://tech-blog-website.herokuapp.com/
 
-#### Schema
+## Schema
 
 ![Node](/assets/images/schema.jpg)
 
-#### Screenshots
+## Screenshots
 
 ![Node](/assets/images/Screenshot_homepage.jpg)
 
