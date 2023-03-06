@@ -1,0 +1,23 @@
+{{>header}}
+
+{{>dashboard-title}}
+
+{{#if userloggedin}}
+    <div class="blog-posts">
+        <div class="blog-post-heading">
+            <p>Create new post</p> 
+        </div>
+        <div class="blog-post-text">
+            <form id="new-post-form">
+                <label for="email">Heading</label>
+                <input id="new-post-heading" name="new-post-heading" type="text">
+                <label for="blog-text">Post</label>
+                <textarea id="new-post-text" name="blog-text" rows="4" cols="50"></textarea>
+                <button id="new-post-submit">Create post</button>
+            </form>
+         </div>
+    </div>
+
+{{else}}
+<a href="/signin">Sign-in</a>
+{{/if}}

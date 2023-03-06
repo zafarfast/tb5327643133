@@ -1,0 +1,16 @@
+
+{{>header}}
+
+{{>title}}
+
+  {{#each blogs as |post|}}
+    <div class="blog-posts">
+        <a href="/comments/{{post.id}}" data-id={{post.id}}><div class="blog-post-heading">
+            <p>{{post.heading}}</p> 
+            <p class="posted-by">Posted by {{post.user.name}} on {{post.date}}</p> 
+        </div></a>
+        <div class="blog-post-text">
+            {{post.text}}
+        </div>
+    </div>
+{{/each}}

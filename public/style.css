@@ -1,0 +1,285 @@
+body
+{
+    margin: 0px;
+    padding: 0px;
+    background: #D9EAD3;
+}
+li
+{
+    margin-top: 0px;
+    padding-top: 8px;
+    margin-right: 15px;
+    color: white;
+    list-style: none;   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: left;
+
+}
+nav
+{
+    background-color: #231010;
+    padding-bottom: 1%;
+    margin: 0px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+a
+{
+    text-decoration: none;
+    color:white;
+}
+
+a:hover
+{
+    color: #7281a2;
+}
+
+.heading
+{
+    background-color: #231010;
+    height: 80px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.heading p
+{
+    background-color: #D9EAD3;
+    box-shadow: 5px 5px #8a8888;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.blog-posts, .signup
+{
+    border: #231010 solid 2px;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.user-posts
+{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius:10px;
+
+}
+
+.blog-post-heading, .signup-heading
+{
+    background-color: #231010;
+    color: #D9EAD3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.user-post-heading
+{
+    background-color: #656262;
+    color: #D9EAD3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: fit-content;
+    font-weight: bold;
+    border-radius:3px;
+
+}
+
+#new-post-button-div
+{
+    display: flex;
+    justify-content: center;
+}
+#new-post-submit, #new-post
+{
+    margin: auto;
+    margin-left: 46.5%;
+}
+
+#new-comment
+{
+margin-top: 10px;
+display: flex;
+flex-direction: column;
+}
+
+#new-post, #new-comment-submit
+{
+    background-color: #231010;
+    color: white;
+    font-size: larger;
+    border: #231010;
+    margin: auto;    
+    padding: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+}
+
+#new-post:hover, #new-comment-submit:hover
+{
+    background-color: #251a1a;
+
+}
+.posted-by
+{
+    color: #8a8888;
+    font-weight: 500;
+    font-size: small;
+
+}
+.blog-post-text
+{
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#new-post-form{
+
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#new-post-form label
+{
+    margin-bottom:10px;
+    margin-top: 10px;
+    
+}
+
+#new-post-form button
+{
+    margin-bottom:10px;
+    margin-top: 10px;
+    
+}
+
+.signup-fields form{
+
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.signup-fields form input, .signup-fields form label{
+    margin: 5px;
+}
+
+input{
+    height: 30px;
+
+}
+
+.signup-fields form button{
+    margin: 5px;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+
+}
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+.comment-heading
+{
+    background-color: #231010;
+    color: #D9EAD3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    
+}
+#newpost{
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 150px;
+    background-color: #1e1d1d;
+    border-radius: 5px;
+    color:white;
+    
+}
+#message
+{
+    margin: auto;
+}
+
+.new-comment-cancel
+{
+    background-color: #231010;
+    color: white;
+    font-size: larger;
+    border: #231010;
+    margin: auto;
+    margin-top: 10px;
+    padding: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+}
+
+.new-comment-cancel:hover
+{
+    background-color: #251a1a;
+
+}
+@media screen and (max-width: 640px) {
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .heading
+    {
+        justify-content: center;
+    }
+
+    .blog-post-heading
+    {
+        flex-wrap: wrap;
+    }
+}

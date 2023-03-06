@@ -1,0 +1,16 @@
+<!-- /////////////////////////NAV BAR SECTION////////////////////////// -->
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            {{#if userloggedin}}
+            <li id="logout"><a href="/logout">Logout</a></li>
+
+            {{else}}
+            <li id="signin"><a href="/signin">Login</a></li>
+            <li id="signup"><a href="/signup">Sign-up</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+

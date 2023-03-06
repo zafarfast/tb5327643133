@@ -1,0 +1,50 @@
+{{>header}}
+
+{{>dashboard-title}}
+
+{{#if userloggedin}}
+
+    <div class="blog-posts">
+       <div class="blog-post-heading">
+            <p id="postid" data-id={{postid}}>{{postheading}}</p> 
+            {{!-- <p class="posted-by">Posted by {{post.user.name}}</p>  --}}
+        </div>
+        <div class="blog-post-text">
+            {{posttext}}
+        </div>
+    </div>
+    <div id="new-comment">
+            <button id="new-comment-submit">+ Add Comment</button>
+            <span class='hide new-comment-cancel' id="cancel-comment">Cancel</span>
+            
+    </div>
+{{!-- ///////////////////////////////ADD COMMENT SECTION - HIDDEN //////////// --}}
+
+    <div id="comment-section" class="hide blog-posts">
+        <div class="blog-post-heading">
+            <p>Add new comment</p>
+        </div>
+        <div class="blog-post-text">
+            <form id="new-post-form">
+                <label for="blog-text">Comment</label>
+                <textarea id="new-comment-text" name="blog-text" rows="4" cols="50"></textarea>
+                <button id="add-comment-submit">Add comment</button>
+            </form>
+         </div>
+    </div>
+{{!-- //////////////////////////////////////////////////////////////////////// --}}
+    <p class="comment-heading">Comments</p>
+    {{#each comments as |comment|}}
+        <div class="blog-posts">
+        <div class="blog-post-heading">
+            <p class="posted-by">Comment by {{comment.comment_by}}</p> 
+        </div>
+        <div class="blog-post-text">
+            {{comment.comment}}
+        </div>
+    </div>
+    {{/each}}
+
+
+{{/if}}
+
