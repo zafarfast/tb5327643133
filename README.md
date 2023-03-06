@@ -20,6 +20,12 @@ Tech blog allows user to share their ideas, opinions and thoughts with the world
 6) Seed the database by typing `node seeds\seed.js` in home directory.
 7) Run the application by typing `node server.js` in the terminal.
 
+## Links
+#### Github 
+https://github.com/zafarfast/tb5327643133
+#### Heroku 
+https://tech-blog-website.herokuapp.com/
+
 #### Schema
 
 ![Node](/assets/images/schema.jpg)
