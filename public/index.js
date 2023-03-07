@@ -47,6 +47,41 @@ function newpost()
     window.location.replace('/newpost')
 }
 
+function updatePost()
+{
+    const text = document.getElementById('updated-text').value;
+    const id = document.getElementById('postid').getAttribute('data-id');
+    
+    fetch(`/updatepost/${id}`,{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+        
+        body: JSON.stringify({
+            "text":text
+        })
+    })
+    
+    .then((response)=>{
+        return response.text()
+    })
+    
+    .then((data)=>{
+        
+        if (data == 'Post has been updated')
+            {location.href = `/comments/${id}`}
+        else
+        {
+            location.href='/'
+        }
+
+        
+    })
+
+}
+
 function newcomment()
 {
     document.getElementById('comment-section').classList.add('show')
@@ -207,3 +242,12 @@ if (document.getElementById("add-comment-submit"))
         submitComment();
  })}
     
+
+ if (document.getElementById("update-post-submit"))
+{
+
+    document.getElementById('update-post-submit').addEventListener("click", ()=>{
+        event.preventDefault();
+        updatePost();
+ })}
+
