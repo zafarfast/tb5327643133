@@ -220,6 +220,19 @@ input{
     display: block;
 }
 
+#login-fail-text
+{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dashboard-message
+{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10%;
+}
+
 .comment-heading
 {
     background-color: #231010;

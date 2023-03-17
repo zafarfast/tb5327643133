@@ -7,7 +7,7 @@
 <p class="comment-heading">Your posts</p>
 {{#each userpost as |post|}}
    <div class="user-posts">
-       <a href="/comment/{{post.id}}"><div class="user-post-heading">
+       <a href="/updatepost/{{post.id}}"><div class="user-post-heading">
            <p>{{post.heading}}</p> 
        </div></a>
    </div>
@@ -16,5 +16,7 @@
     <button id="new-post">+ New Post</button>
 </div>
 
+{{else}}
+<h3 class="dashboard-message"> Login to view dashboard</h3>
 {{/if}}
 

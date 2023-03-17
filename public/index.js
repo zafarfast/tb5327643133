@@ -31,7 +31,11 @@ function submitdata(event)
     })
     
     .then((data)=>{
-        if (data == 'Email address is not valid' || 'Email address already exist')
+        if (data == 'Email address is not valid')
+        {
+            document.getElementById('message').textContent = data
+        }
+        else if (data == 'Email address already exist')
         {
             document.getElementById('message').textContent = data
         }
@@ -134,7 +138,7 @@ function submitComment()
     const text = document.getElementById('new-comment-text').value;
     const postid = document.getElementById('postid').getAttribute('data-id')
 
-    fetch(`/newcommentpost/${postid}`,{
+    fetch(`/newcomment/${postid}`,{
         method: 'POST',
         headers: {
             'Accept': 'application/json',

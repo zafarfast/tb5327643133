@@ -1,0 +1,31 @@
+{{>header}}
+
+{{>editpost}}
+
+{{#if userloggedin}}
+
+    <div class="blog-posts">
+       <div class="blog-post-heading">
+            <p id="postid" data-id={{postid}}>{{postheading}}</p> 
+            {{!-- <p class="posted-by">Posted by {{post.user.name}}</p>  --}}
+        </div>
+        <div class="blog-post-text">
+            {{posttext}}
+        </div>
+    </div>
+{{!-- ///////////////////////////////EDIT COMMENT SECTION - HIDDEN //////////// --}}
+
+    <div id="comment-section" class="blog-posts">
+        <div class="blog-post-heading">
+            <p>Edit post</p>
+        </div>
+        <div class="blog-post-text">
+            <form id="new-post-form">
+                <label for="blog-text">Type new text</label>
+                <textarea id="updated-text" name="blog-text" rows="4" cols="50"></textarea>
+                <button id="update-post-submit">Update Post</button>
+            </form>
+         </div>
+    </div>
+
+{{/if}}
