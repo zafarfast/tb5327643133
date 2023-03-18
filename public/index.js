@@ -185,7 +185,7 @@ function signin()
     .then((data)=>{
         console.log(data)
         if (data == 'Username or password is incorrect')
-        {document.getElementById("login-fail-text").textContent = 'Login failed'}
+        {document.getElementById("login-fail-text").textContent = data}
         else
         {
             window.location.replace('/')
