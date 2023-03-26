@@ -12,7 +12,7 @@ router.delete('/:id', async (req,res)=>{
     }
     else
     {
-        req.redirect('/')
+        res.redirect('/')
     }
 })
 
