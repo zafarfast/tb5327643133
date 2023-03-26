@@ -9,6 +9,7 @@ const newPost = require('./api/newPost'); // Import newPost route
 const signin = require('./api/signin'); // Import sign route
 const signup = require('./api/signup'); // Import signup route
 const updatePost = require('./api/updatePost'); // Import updatePost route
+const deletePost = require('./api/deletePost'); // Import deletePost route
 
 //Adding routes to the Router middleware
 router.use('/', homeroute);
@@ -20,5 +21,6 @@ router.use('/newPost', newPost);
 router.use('/signin', signin);
 router.use('/signup', signup);
 router.use('/updatePost', updatePost);
+router.use('/deletePost', deletePost);
 
 module.exports = router;

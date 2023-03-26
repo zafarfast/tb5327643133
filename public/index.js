@@ -86,6 +86,36 @@ function updatePost()
 
 }
 
+function deletePost()
+{
+    const id = document.getElementById('postid').getAttribute('data-id');
+    
+    fetch(`/deletepost/${id}`,{
+        method: 'DELETE',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          }
+    })
+    
+    .then((response)=>{
+        return response.text()
+    })
+    
+    .then((data)=>{
+        
+        if (data == 'Post has been deleted')
+            {location.href = `/`}
+        else
+        {
+            location.href='/'
+        }
+
+        
+    })
+
+}
+
 function newcomment()
 {
     document.getElementById('comment-section').classList.add('show')
@@ -253,5 +283,13 @@ if (document.getElementById("add-comment-submit"))
     document.getElementById('update-post-submit').addEventListener("click", ()=>{
         event.preventDefault();
         updatePost();
+ })}
+
+ if (document.getElementById("delete-post"))
+{
+
+    document.getElementById('delete-post').addEventListener("click", ()=>{
+        event.preventDefault();
+        deletePost();
  })}
 
