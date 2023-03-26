@@ -14,7 +14,7 @@ router.get('/:id', async (req,res)=>{
     }
     else
     {
-        req.redirect('/')
+        res.redirect('/')
     }
 })
 
@@ -30,7 +30,7 @@ router.post('/:id', async (req,res)=>{
     }
     else
     {
-        req.redirect('/')
+        res.redirect('/')
     }
 })
 
